@@ -16,7 +16,7 @@
       justify-content: center;
     }
 
-    /* Make the image full screen for jumpscare */
+    
     #myImage {
       display: none;
       position: fixed;
@@ -37,25 +37,25 @@
     <button onclick="playSoundAndShowImage()">你干嘛哈哈哎哟</button>
   </div>
 
-  <!-- Fullscreen hidden image -->
-  <img id="myImage" src="media/kun.jpg" alt="Surprise Image">
+ 
+  <img id="myImage" src="kun.jpg" alt="Surprise Image">
 
-  <!-- Audio element -->
-  <audio id="soundEffect" src="media/niganma.MP3" preload="auto"></audio>
+ 
+  <audio id="soundEffect" src="niganma.MP3" preload="auto"></audio>
 
   <script>
     function playSoundAndShowImage() {
       const sound = document.getElementById("soundEffect");
       const img = document.getElementById("myImage");
 
-      // Play sound
+      
       sound.currentTime = 0;
       sound.play();
 
-      // Show fullscreen image
+      
       img.style.display = "block";
 
-      // Optional: hide after 2 seconds
+      
       setTimeout(() => {
         img.style.display = "none";
       }, 2000);
