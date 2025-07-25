@@ -2,65 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>全民制作人</title>
+  <title>Kun Page</title>
   <style>
     body {
       text-align: center;
-      margin-top: 100px;
+      background-color: #111;
+      color: white;
       font-family: Arial, sans-serif;
-      font-size: 35px;
+      margin: 0;
+      padding: 20px;
     }
 
-    #buttonContainer {
-      display: flex;
-      justify-content: center;
-    }
-
-    
-    #myImage {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: 9999;
+    img {
+      max-width: 90%;
+      height: auto;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+  <h1>Welcome to Kun Page</h1>
 
-  <h2>食不食油饼？</h2>
+  <!-- Show Image -->
+  <img src="kun.jpg" alt="Kun Image">
 
-  <div id="buttonContainer">
-    <button onclick="playSoundAndShowImage()">你干嘛哈哈哎哟</button>
-  </div>
-
- 
-  <img id="myImage" src="kun.jpg" alt="Surprise Image">
-
- 
-  <audio id="soundEffect" src="niganma.MP3" preload="auto"></audio>
-
-  <script>
-    function playSoundAndShowImage() {
-      const sound = document.getElementById("soundEffect");
-      const img = document.getElementById("myImage");
-
-      
-      sound.currentTime = 0;
-      sound.play();
-
-      
-      img.style.display = "block";
-
-      
-      setTimeout(() => {
-        img.style.display = "none";
-      }, 2000);
-    }
-  </script>
-
+  <!-- Play Sound -->
+  <p>Enjoy the sound below:</p>
+  <audio controls>
+    <source src="nigamma.MP3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
