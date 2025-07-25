@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全民制作人</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 35px;
+    }
+
+    #buttonContainer {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Make the image full screen for jumpscare */
+    #myImage {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>食不食油饼？</h2>
+
+  <div id="buttonContainer">
+    <button onclick="playSoundAndShowImage()">你干嘛哈哈哎哟</button>
+  </div>
+
+  <!-- Fullscreen hidden image -->
+  <img id="myImage" src="media/kun.jpg" alt="Surprise Image">
+
+  <!-- Audio element -->
+  <audio id="soundEffect" src="media/niganma.MP3" preload="auto"></audio>
+
+  <script>
+    function playSoundAndShowImage() {
+      const sound = document.getElementById("soundEffect");
+      const img = document.getElementById("myImage");
+
+      // Play sound
+      sound.currentTime = 0;
+      sound.play();
+
+      // Show fullscreen image
+      img.style.display = "block";
+
+      // Optional: hide after 2 seconds
+      setTimeout(() => {
+        img.style.display = "none";
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
